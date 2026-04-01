@@ -1,22 +1,20 @@
-#include<iostream>
-#include<cmath>
-#include<stdio.h>
+#include <stdio.h>
+
+#include <cmath>
+#include <iostream>
 using namespace std;
-const double PI=3.14;
-int main()
-{
-	int R;
-	double S;
-	double A,B;
-	while(cin>>R)
-	{
-		if(R==0)
-			break;
-		S=PI*R*R;
-		S=S/3;
-		A=sqrt(S/PI);
-		B=sqrt((2*S)/PI);
-		printf("%.3lf %.3lf\n",A,B);
-	}
-	return 0;
+const double PI = 3.14;
+int main() {
+  int R;
+  double S;
+  double A, B;
+  while (cin >> R) {
+    if (R == 0) break;
+    S = PI * R * R;
+    S = S / 3;
+    A = sqrt(S / PI);
+    B = sqrt((2 * S) / PI);
+    printf("%.3lf %.3lf\n", A, B);
+  }
+  return 0;
 }

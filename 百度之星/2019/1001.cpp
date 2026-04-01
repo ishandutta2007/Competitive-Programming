@@ -1,8 +1,8 @@
-#include <iostream>
+#include <algorithm>
+#include <cmath>
 #include <cstdio>
 #include <cstring>
-#include <cmath>
-#include <algorithm>
+#include <iostream>
 #include <queue>
 #include <stack>
 #include <vector>
@@ -12,26 +12,25 @@ using namespace std;
 
 const int maxn = 1e6 + 123;
 int f[maxn], g[maxn];
-int main(int argc, char const *argv[]) {
+int main(int argc, char const* argv[]) {
   int t;
   int n, m;
   std::cin >> t;
-  while(t--) {
+  while (t--) {
     std::cin >> n;
     m = n;
-    for(int i = 1; i <= n; i++) {
+    for (int i = 1; i <= n; i++) {
       std::cin >> f[i];
     }
-    for(int i = 1; i <= n; i++) {
+    for (int i = 1; i <= n; i++) {
       std::cin >> g[i];
     }
-    while(f[n] == 0) n -= 1;
-    while(g[m] == 0) m -= 1;
-    if(n > m) {
+    while (f[n] == 0) n -= 1;
+    while (g[m] == 0) m -= 1;
+    if (n > m) {
       std::cout << "1/0" << '\n';
       continue;
-    }
-    else if(n < m) {
+    } else if (n < m) {
       std::cout << "0/1" << '\n';
       continue;
     }

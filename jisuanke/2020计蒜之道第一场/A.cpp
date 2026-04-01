@@ -1,7 +1,7 @@
+#include <cstdio>
+#include <cstring>
 #include <iostream>
 #include <vector>
-#include <cstring>
-#include <cstdio>
 
 using namespace std;
 
@@ -81,7 +81,7 @@ bool SubDiagonal(int x, int y) {
     return 0;
 }
 
-int main(int argc, char const *argv[]) {
+int main(int argc, char const* argv[]) {
   int n;
   string s;
   for (int i = 0; i < 25; i++) {

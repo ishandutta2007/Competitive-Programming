@@ -29,14 +29,14 @@ long long count_triples(std::vector<int> H) {
 
   for (int i = 0; i < N * 3; i++)
     if (!Q[i].empty()) {
-      for (auto &j : Q[i]) {
-        for (auto &y : buf[j]) cnt[y]++;
+      for (auto& j : Q[i]) {
+        for (auto& y : buf[j]) cnt[y]++;
       }
 
-      for (auto &y : buf[i]) ans += cnt[y];
+      for (auto& y : buf[i]) ans += cnt[y];
 
-      for (auto &j : Q[i]) {
-        for (auto &y : buf[j]) cnt[y]--;
+      for (auto& j : Q[i]) {
+        for (auto& y : buf[j]) cnt[y]--;
       }
     }
 
@@ -107,7 +107,7 @@ std::vector<int> construct_range(int M, int K) {
 
     if (mx == 0) break;
 
-    for (auto &x : C) {
+    for (auto& x : C) {
       if (x + opt < N * 2 && !used[x + opt]) {
         used[x + opt] = 1;
         if (x < opt) {
@@ -120,7 +120,7 @@ std::vector<int> construct_range(int M, int K) {
           Y.push_back(x);
         }
 
-        for (auto &y : C) {
+        for (auto& y : C) {
           int z = x + opt - y;
           if (0 <= z && z < N * 2) V[z]--;
         }

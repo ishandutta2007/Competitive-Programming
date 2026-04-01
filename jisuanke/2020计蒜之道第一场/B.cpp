@@ -1,7 +1,7 @@
+#include <cstdio>
+#include <cstring>
 #include <iostream>
 #include <vector>
-#include <cstring>
-#include <cstdio>
 
 using namespace std;
 
@@ -11,7 +11,7 @@ int black[maxn];
 int white[maxn];
 int t[maxn], l[maxn], r[maxn], c[maxn];
 int seg[maxn];
-int main(int argc, char const *argv[]) {
+int main(int argc, char const* argv[]) {
   cin >> n >> m;
   for (int i = 1; i <= n; i++) {
     cin >> black[i];
@@ -21,7 +21,7 @@ int main(int argc, char const *argv[]) {
   }
   for (int i = 1; i <= m; i++) {
     cin >> t[i] >> l[i] >> r[i] >> c[i];
-    for (int j = l[i]; j <= r[i]; j++) seg[j] = 1;  //在区间
+    for (int j = l[i]; j <= r[i]; j++) seg[j] = 1;  // 在区间
   }
   long long ans = 0;
   for (int i = 1; i <= n; i++) {

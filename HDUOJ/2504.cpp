@@ -1,33 +1,28 @@
-#include<iostream>   
-#include<cstdlib>  
-#include<cstdio>  
-#include<cmath>  
-#include<cstring>  
-#include<string>  
-#include<cstdlib>  
-#include<iomanip>  
-#include<vector>  
-#include<list>  
-#include<map>  
-#include<algorithm>  
-typedef long long LL;  
-using namespace std; 
-const int maxn=100;
+#include <algorithm>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <iomanip>
+#include <iostream>
+#include <list>
+#include <map>
+#include <string>
+#include <vector>
+typedef long long LL;
+using namespace std;
+const int maxn = 100;
 
-int main()
-{
-  	
-	int a,b,c,d,e,f,m,flag;
-	cin>>m;
-	while(m--)
-	{
-		cin>>a>>b;
-		c=b+b;
-		while(__gcd(a,c)!=b) 
-		{
-			c=c+b; //让c逐渐增大 
-		}
-		printf("%d\n",c);
-	}
-	return 0;
- } 
+int main() {
+  int a, b, c, d, e, f, m, flag;
+  cin >> m;
+  while (m--) {
+    cin >> a >> b;
+    c = b + b;
+    while (__gcd(a, c) != b) {
+      c = c + b;  // 让c逐渐增大
+    }
+    printf("%d\n", c);
+  }
+  return 0;
+}

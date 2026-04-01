@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+
 #include <list>
 using namespace std;
 typedef long long ll;
@@ -7,7 +8,7 @@ const int mod = 1000000007;
 char s[maxn];
 pair<int, int> arr[maxn];
 int num;
-int main(int argc, char const *argv[]) {
+int main(int argc, char const* argv[]) {
   int n, k;
   while (cin >> n >> k) {
     scanf("%s", s + 1);
@@ -18,8 +19,7 @@ int main(int argc, char const *argv[]) {
       if (s[i] == '1') {
         if (s[i - 1] == '1') {
           arr[num - 1].first += 1;
-        }
-        else {
+        } else {
           arr[num].second = 0;
           arr[num++].first = 1;
         }
@@ -72,7 +72,7 @@ int main(int argc, char const *argv[]) {
         int pos = num - 1;
         int tmp = k - 1;
         int res = high;
-        if (arr[pos].second == len)  {
+        if (arr[pos].second == len) {
           pos--;
         }
         if (tmp && pos >= 0) {
@@ -82,7 +82,8 @@ int main(int argc, char const *argv[]) {
         }
         while (tmp > 1 && pos >= 0) {
           if (arr[pos].second == len) {
-            pos--; continue;
+            pos--;
+            continue;
           }
           res += arr[pos].first;
           pos--;
@@ -105,9 +106,8 @@ int main(int argc, char const *argv[]) {
         }
         ans = max(ans, res);
       }
-    }
-    else {
-        ans = low;
+    } else {
+      ans = low;
     }
     std::cout << ans << '\n';
   }
